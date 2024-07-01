@@ -30,8 +30,10 @@ header('content-type:application/json');
 // echo json_encode($toDo);
 
 $rawData = file_get_contents('./db/todo.json');
-$data = json_decode($rawData, true );
+$data = json_decode($rawData,true);
+
+file_put_contents('./db/todo_2.json', $data);
 
 // var_dump($rawData,  $data);
-echo json_encode($data);
+echo $data;
 ?>
