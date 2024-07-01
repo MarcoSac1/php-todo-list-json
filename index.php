@@ -18,9 +18,9 @@
                     <div class="col-12">
                         <h1>PHP ToDo</h1>
                     </div>
-                    <div class="col-3" v-for='data in data'>
+                    <div class="col-3" v-for='dat in data'>
                             <div class="card">
-                                <h2 class="card-title"> {{ data.nome }}</h2>
+                                <h2 class="card-title"> {{ dat.nome }}</h2>
                             </div>
                     </div>
                 </div>
