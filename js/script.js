@@ -10,13 +10,14 @@ createApp({
     },    
     methods: {
         getData(){
-            axios.get('/user', {
+            axios.get('/server.php', {
                     params: {
                         nome: this.nome,
                     }
                 })
-                .then(function (response) {
+                .then((response) => {
                     console.log(response);
+                    this.data = response.data;
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -26,4 +27,7 @@ createApp({
                 });  
             },
     },
+    created(){
+        this.getData();
+    }
 }).mount('#app')
