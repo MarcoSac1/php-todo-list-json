@@ -15,13 +15,22 @@
         <section class="content">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-6">
                         <h1>PHP ToDo</h1>
                     </div>
-                    <div class="col-3" v-for='dat in data'>
-                            <div class="card">
-                                <h2 class="card-title"> {{ dat.nome }}</h2>
-                            </div>
+                    <section class="todo-list">
+                    <div class="list-group">
+                        <ul>
+                            <li href="#" class="list-group-item list-group-item-action" v-for='todoElement in todoList' >A second link item</li>
+                            <li href="#" class="list-group-item list-group-item-action">A third link item</li>
+                            <li href="#" class="list-group-item list-group-item-action">A fourth link item</li>
+                        </ul>
+                    </div>
+                    </section>
+                    <div class="col-3" v-for='data in data'>
+                        <div class="card">
+                            <h2 class="card-title"> </h2>
+                        </div>
                     </div>
                 </div>
             </div>

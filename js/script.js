@@ -4,20 +4,16 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            nome: '',
-            data:[],
+            todoList :[],
+            apiUrl : './api/get_all_list.php',
         }
     },    
     methods: {
-        getData(){
-            axios.get('/server.php', {
-                    params: {
-                        nome: this.nome,
-                    }
-                })
+        getTodoList(){
+            axios.get('this.apiUrl')
                 .then((response) => {
                     console.log(response);
-                    this.data = response.data;
+                    this.todoList = response.data;
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -28,6 +24,6 @@ createApp({
             },
     },
     created(){
-        this.getData();
+        this.getTodoList();
     }
 }).mount('#app')
